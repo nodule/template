@@ -1,0 +1,22 @@
+{
+  "name":"mustache",
+  "description":"Mustache Template engine",
+  "require":{
+    "mustache":"latest"
+  },
+  "ports":{
+    "input":{
+      "body":{
+        "type":"string"
+      },
+      "vars":{
+        "type":"object"
+      }
+    },
+    "output":{
+      "html":{
+        "type":"string"
+      }
+    }
+  }
+}

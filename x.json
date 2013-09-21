@@ -1,0 +1,67 @@
+{
+  "name": "template",
+  "description": "Chiχ Template Engines",
+  "version": "0.0.1",
+  "licences": [
+    {
+      "type": "MIT",
+      "url": "templates://github.com/psichi/chix/raw/master/LICENSE"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "templates://github.com/psichi/chix-template.git"
+  },
+  "dependencies": {
+    "marked": "latest",
+    "mustache": "latest"
+  },
+  "nodes": [
+    {
+      "ports": {
+        "input": {
+          "body": {
+            "type": "string"
+          }
+        },
+        "output": {
+          "body": {
+            "type": "string"
+          }
+        }
+      },
+      "require": {
+        "marked": "latest"
+      },
+      "description": "Markdown",
+      "name": "markdown",
+      "ns": "template",
+      "fn": "output = { body: marked(input.body) }\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "body": {
+            "type": "string"
+          },
+          "vars": {
+            "type": "object"
+          }
+        },
+        "output": {
+          "html": {
+            "type": "string"
+          }
+        }
+      },
+      "require": {
+        "mustache": "latest"
+      },
+      "description": "Mustache Template engine",
+      "name": "mustache",
+      "ns": "template",
+      "fn": "output = { html: mustache.render(input.body, input.vars) }\n"
+    }
+  ],
+  "twigs": []
+}
