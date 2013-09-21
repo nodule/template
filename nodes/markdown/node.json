@@ -1,0 +1,19 @@
+{
+  "name":"markdown",
+  "description":"Markdown",
+  "require":{
+    "marked":"latest"
+  },
+  "ports":{
+    "input":{
+      "body":{
+        "type":"string"
+      }
+    },
+    "output":{
+      "body":{
+        "type":"string"
+      }
+    }
+  }
+}

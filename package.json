@@ -1,0 +1,28 @@
+{
+  "name": "chix-template",
+  "description": "Chiχ Template Engines",
+  "author": "Rob Halff <rob.halff@gmail.com>",
+  "version": "0.0.1",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "templates://github.com/psichi/chix/raw/master/LICENSE"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "templates://github.com/psichi/chix-template.git"
+  },
+  "engines": {
+    "node": ">=0.6.0"
+  },
+  "dependencies": {
+    "marked": "latest"
+  },
+  "devDependencies": {
+  },
+  "main": "x",
+  "chix": {
+	"name": "template"
+  }
+}
