@@ -2,7 +2,7 @@
   "name": "chix-template",
   "description": "Chiχ Template Engines",
   "author": "Rob Halff <rob.halff@gmail.com>",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "licenses": [
     {
       "type": "MIT",
@@ -20,10 +20,9 @@
     "marked": "latest",
     "mustache": "latest"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "main": "x",
   "chix": {
-	"name": "template"
+    "name": "template"
   }
 }
