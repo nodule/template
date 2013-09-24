@@ -7,7 +7,10 @@
   "ports":{
     "input":{
       "body":{
-        "type":"string"
+        "type":"string",
+        "title":"Body",
+        "description":"The body of this markdown document",
+        "required": true
       }
     },
     "output":{

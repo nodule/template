@@ -7,10 +7,17 @@
   "ports":{
     "input":{
       "body":{
-        "type":"string"
+        "type":"string",
+        "title":"Template body",
+        "description":"The body of the mustache template",
+        "required": true
       },
       "vars":{
-        "type":"object"
+        "type":"object",
+        "title":"Input variables",
+        "description":"the input variables for this template",
+        "required": true,
+        "readonly": true
       }
     },
     "output":{
