@@ -1,17 +1,12 @@
 {
-  "name": "chix-template",
+  "name": "nodule-template",
   "description": "Chiχ Template Engines",
   "author": "Rob Halff <rob.halff@gmail.com>",
   "version": "0.0.2",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "templates://github.com/psichi/chix/raw/master/LICENSE"
-    }
-  ],
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "templates://github.com/psichi/chix-template.git"
+    "url": "templates://github.com/nodule/template.git"
   },
   "engines": {
     "node": ">=0.6.0"
