@@ -1,5 +1,6 @@
 {
   "name":"mustache",
+  "ns":"template",
   "description":"Mustache Template engine",
   "require":{
     "mustache":"latest"

@@ -1,5 +1,6 @@
 {
   "name":"markdown",
+  "ns":"template",
   "description":"Markdown",
   "require":{
     "marked":"latest"

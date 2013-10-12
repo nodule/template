@@ -2,15 +2,9 @@
   "name": "template",
   "description": "Chiχ Template Engines",
   "version": "0.0.2",
-  "licences": [
-    {
-      "type": "MIT",
-      "url": "templates://github.com/psichi/chix/raw/master/LICENSE"
-    }
-  ],
   "repository": {
     "type": "git",
-    "url": "templates://github.com/psichi/chix-template.git"
+    "url": "templates://github.com/nodule/template.git"
   },
   "dependencies": {
     "marked": "latest",
@@ -37,8 +31,8 @@
         "marked": "latest"
       },
       "description": "Markdown",
-      "name": "markdown",
       "ns": "template",
+      "name": "markdown",
       "fn": "output = { body: marked(input.body) }\n"
     },
     {
@@ -68,8 +62,8 @@
         "mustache": "latest"
       },
       "description": "Mustache Template engine",
-      "name": "mustache",
       "ns": "template",
+      "name": "mustache",
       "fn": "output = { html: mustache.render(input.body, input.vars) }\n"
     }
   ],
