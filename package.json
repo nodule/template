@@ -23,6 +23,7 @@
     "test": "chit"
   },
   "chix": {
-    "name": "template"
+    "name": "template",
+    "color": "rgb(126,56,139)"
   }
 }
