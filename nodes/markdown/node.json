@@ -2,6 +2,9 @@
   "name":"markdown",
   "ns":"template",
   "description":"Markdown",
+  "phrases": {
+    "active": "Creating markdown document"
+  },
   "require":{
     "marked":"latest"
   },

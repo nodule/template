@@ -30,6 +30,9 @@
       "require": {
         "marked": "latest"
       },
+      "phrases": {
+        "active": "Creating markdown document"
+      },
       "description": "Markdown",
       "ns": "template",
       "name": "markdown",
@@ -57,6 +60,9 @@
             "type": "string"
           }
         }
+      },
+      "phrases": {
+        "active": "Compiling mustache template"
       },
       "require": {
         "mustache": "latest"
