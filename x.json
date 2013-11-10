@@ -7,10 +7,46 @@
     "url": "templates://github.com/nodule/template.git"
   },
   "dependencies": {
-    "marked": "latest",
-    "mustache": "latest"
+    "mustache": "0.x.x",
+    "marked": "0.x.x",
+    "jade": "0.x.x"
   },
   "nodes": [
+    {
+      "ports": {
+        "input": {
+          "body": {
+            "type": "string",
+            "format": "html",
+            "title": "Template body",
+            "description": "The body of the Jade template",
+            "required": true
+          },
+          "vars": {
+            "type": "object",
+            "title": "Input variables",
+            "description": "the input variables for this template",
+            "required": true,
+            "readonly": true
+          }
+        },
+        "output": {
+          "html": {
+            "type": "string"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Compiling jade template"
+      },
+      "require": {
+        "jade": "0.x.x"
+      },
+      "description": "Jade Template engine",
+      "ns": "template",
+      "name": "jade",
+      "fn": "output = { html: jade.render(input.body, input.vars) }\n"
+    },
     {
       "ports": {
         "input": {
@@ -43,6 +79,7 @@
         "input": {
           "body": {
             "type": "string",
+            "format": "html",
             "title": "Template body",
             "description": "The body of the mustache template",
             "required": true

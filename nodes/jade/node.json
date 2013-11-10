@@ -1,12 +1,12 @@
 {
-  "name":"mustache",
+  "name":"jade",
   "ns":"template",
-  "description":"Mustache Template engine",
+  "description":"Jade Template engine",
   "require":{
-    "mustache":"latest"
+    "jade":"0.x.x"
   },
   "phrases": {
-    "active": "Compiling mustache template"
+    "active": "Compiling jade template"
   },
   "ports":{
     "input":{
@@ -14,7 +14,7 @@
         "type":"string",
         "format":"html",
         "title":"Template body",
-        "description":"The body of the mustache template",
+        "description":"The body of the Jade template",
         "required": true
       },
       "vars":{
