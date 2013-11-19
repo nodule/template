@@ -42,6 +42,7 @@
       "require": {
         "jade": "0.x.x"
       },
+      "env": "server",
       "description": "Jade Template engine",
       "ns": "template",
       "name": "jade",
