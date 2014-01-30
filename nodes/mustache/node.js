@@ -1,1 +1,3 @@
-output = { html: mustache.render(input.body, input.vars) }
+output = {
+  html: mustache.render(input.body, input.vars)
+}

@@ -1,1 +1,3 @@
-output = { body: marked(input.body) }
+output = {
+  body: marked(input.body)
+}
