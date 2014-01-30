@@ -14,16 +14,6 @@
   },
   "nodes": [
     {
-      "name": "jade",
-      "ns": "template",
-      "description": "Jade Template engine",
-      "env": "server",
-      "require": {
-        "jade": "0.x.x"
-      },
-      "phrases": {
-        "active": "Compiling jade template"
-      },
       "ports": {
         "input": {
           "body": {
@@ -82,18 +72,19 @@
           }
         }
       },
+      "phrases": {
+        "active": "Compiling jade template"
+      },
+      "require": {
+        "jade": "0.x.x"
+      },
+      "env": "server",
+      "description": "Jade Template engine",
+      "ns": "template",
+      "name": "jade",
       "fn": "output = { html: jade.render(input.body, input.vars) }\n"
     },
     {
-      "name": "markdown",
-      "ns": "template",
-      "description": "Markdown",
-      "phrases": {
-        "active": "Creating markdown document"
-      },
-      "require": {
-        "marked": "latest"
-      },
       "ports": {
         "input": {
           "body": {
@@ -109,18 +100,18 @@
           }
         }
       },
+      "require": {
+        "marked": "latest"
+      },
+      "phrases": {
+        "active": "Creating markdown document"
+      },
+      "description": "Markdown",
+      "ns": "template",
+      "name": "markdown",
       "fn": "output = { body: marked(input.body) }\n"
     },
     {
-      "name": "mustache",
-      "ns": "template",
-      "description": "Mustache Template engine",
-      "require": {
-        "mustache": "latest"
-      },
-      "phrases": {
-        "active": "Compiling mustache template"
-      },
       "ports": {
         "input": {
           "body": {
@@ -144,6 +135,15 @@
           }
         }
       },
+      "phrases": {
+        "active": "Compiling mustache template"
+      },
+      "require": {
+        "mustache": "latest"
+      },
+      "description": "Mustache Template engine",
+      "ns": "template",
+      "name": "mustache",
       "fn": "output = { html: mustache.render(input.body, input.vars) }\n"
     }
   ],
