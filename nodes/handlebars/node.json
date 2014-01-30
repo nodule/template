@@ -1,0 +1,34 @@
+{
+  "name":"handlebars",
+  "ns":"template",
+  "description":"Handlebars Template engine",
+  "require":{
+    "handlebars":"latest"
+  },
+  "phrases": {
+    "active": "Compiling handlebars template"
+  },
+  "ports":{
+    "input":{
+      "body":{
+        "type":"string",
+        "format":"html",
+        "title":"Template body",
+        "description":"The body of the handlebars template",
+        "required": true
+      },
+      "vars":{
+        "type":"object",
+        "title":"Input variables",
+        "description":"the input variables for this template",
+        "required": true,
+        "readonly": true
+      }
+    },
+    "output":{
+      "html":{
+        "type":"string"
+      }
+    }
+  }
+}

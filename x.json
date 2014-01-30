@@ -9,9 +9,45 @@
   "dependencies": {
     "mustache": "0.x.x",
     "marked": "0.x.x",
-    "jade": "0.x.x"
+    "jade": "0.x.x",
+    "handlebars": "1.x.x"
   },
   "nodes": [
+    {
+      "ports": {
+        "input": {
+          "body": {
+            "type": "string",
+            "format": "html",
+            "title": "Template body",
+            "description": "The body of the handlebars template",
+            "required": true
+          },
+          "vars": {
+            "type": "object",
+            "title": "Input variables",
+            "description": "the input variables for this template",
+            "required": true,
+            "readonly": true
+          }
+        },
+        "output": {
+          "html": {
+            "type": "string"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Compiling handlebars template"
+      },
+      "require": {
+        "handlebars": "latest"
+      },
+      "description": "Handlebars Template engine",
+      "ns": "template",
+      "name": "handlebars",
+      "fn": "var tpl = handlebars.compile(input.body);\noutput = { html: tpl(input.vars); }\n"
+    },
     {
       "ports": {
         "input": {
