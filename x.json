@@ -46,7 +46,7 @@
       "description": "Handlebars Template engine",
       "ns": "template",
       "name": "handlebars",
-      "fn": "var tpl = handlebars.compile(input.body);\noutput = { html: tpl(input.vars); }\n"
+      "fn": "var tpl = handlebars.compile(input.body);\noutput = { html: tpl(input.vars) }\n"
     },
     {
       "ports": {
