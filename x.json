@@ -46,7 +46,7 @@
       "description": "Handlebars Template engine",
       "ns": "template",
       "name": "handlebars",
-      "fn": "var tpl = handlebars.compile(input.body);\noutput = { html: tpl(input.vars) }\n"
+      "fn": "var tpl = handlebars.compile(input.body);\noutput = {\n  html: tpl(input.vars)\n}\n"
     },
     {
       "ports": {
@@ -82,7 +82,7 @@
       "description": "Jade Template engine",
       "ns": "template",
       "name": "jade",
-      "fn": "output = { html: jade.render(input.body, input.vars) }\n"
+      "fn": "output = {\n  html: jade.render(input.body, input.vars)\n}\n"
     },
     {
       "ports": {
@@ -109,7 +109,7 @@
       "description": "Markdown",
       "ns": "template",
       "name": "markdown",
-      "fn": "output = { body: marked(input.body) }\n"
+      "fn": "output = {\n  body: marked(input.body)\n}\n"
     },
     {
       "ports": {
@@ -144,7 +144,7 @@
       "description": "Mustache Template engine",
       "ns": "template",
       "name": "mustache",
-      "fn": "output = { html: mustache.render(input.body, input.vars) }\n"
+      "fn": "output = {\n  html: mustache.render(input.body, input.vars)\n}\n"
     }
   ],
   "twigs": []
