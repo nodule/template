@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "templates://github.com/nodule/template.git"
+    "url": "https://github.com/nodule/template.git"
   },
   "engines": {
     "node": ">=0.6.0"
