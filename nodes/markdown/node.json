@@ -10,7 +10,7 @@
   },
   "ports":{
     "input":{
-      "body":{
+      "in":{
         "type":"string",
         "title":"Body",
         "description":"The body of this markdown document",
@@ -18,7 +18,7 @@
       }
     },
     "output":{
-      "body":{
+      "out":{
         "type":"string"
       }
     }

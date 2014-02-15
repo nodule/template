@@ -1,3 +1,3 @@
 output = {
-  body: marked(input.body)
+  out: marked(input.in)
 }

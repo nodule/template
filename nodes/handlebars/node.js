@@ -1,4 +1,4 @@
 var tpl = handlebars.compile(input.body);
 output = {
-  html: tpl(input.vars)
+  out: tpl(input.vars)
 }

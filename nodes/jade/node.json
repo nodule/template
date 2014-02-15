@@ -27,7 +27,7 @@
       }
     },
     "output":{
-      "html":{
+      "out":{
         "type":"string"
       }
     }

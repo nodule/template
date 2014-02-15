@@ -32,7 +32,7 @@
           }
         },
         "output": {
-          "html": {
+          "out": {
             "type": "string"
           }
         }
@@ -46,7 +46,7 @@
       "description": "Handlebars Template engine",
       "ns": "template",
       "name": "handlebars",
-      "fn": "var tpl = handlebars.compile(input.body);\noutput = {\n  html: tpl(input.vars)\n}\n"
+      "fn": "var tpl = handlebars.compile(input.body);\noutput = {\n  out: tpl(input.vars)\n}\n"
     },
     {
       "ports": {
@@ -67,7 +67,7 @@
           }
         },
         "output": {
-          "html": {
+          "out": {
             "type": "string"
           }
         }
@@ -82,12 +82,12 @@
       "description": "Jade Template engine",
       "ns": "template",
       "name": "jade",
-      "fn": "output = {\n  html: jade.render(input.body, input.vars)\n}\n"
+      "fn": "output = {\n  out: jade.render(input.body, input.vars)\n}\n"
     },
     {
       "ports": {
         "input": {
-          "body": {
+          "in": {
             "type": "string",
             "title": "Body",
             "description": "The body of this markdown document",
@@ -95,7 +95,7 @@
           }
         },
         "output": {
-          "body": {
+          "out": {
             "type": "string"
           }
         }
@@ -109,7 +109,7 @@
       "description": "Markdown",
       "ns": "template",
       "name": "markdown",
-      "fn": "output = {\n  body: marked(input.body)\n}\n"
+      "fn": "output = {\n  out: marked(input.in)\n}\n"
     },
     {
       "ports": {
@@ -130,7 +130,7 @@
           }
         },
         "output": {
-          "html": {
+          "out": {
             "type": "string"
           }
         }
@@ -144,7 +144,7 @@
       "description": "Mustache Template engine",
       "ns": "template",
       "name": "mustache",
-      "fn": "output = {\n  html: mustache.render(input.body, input.vars)\n}\n"
+      "fn": "output = {\n  out: mustache.render(input.body, input.vars)\n}\n"
     }
   ],
   "twigs": []
