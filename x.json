@@ -90,6 +90,7 @@
           "in": {
             "type": "string",
             "title": "Body",
+            "format": "markdown",
             "description": "The body of this markdown document",
             "required": true
           }
