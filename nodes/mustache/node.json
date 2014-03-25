@@ -27,6 +27,7 @@
     },
     "output":{
       "out":{
+        "title":"String",
         "type":"string"
       }
     }

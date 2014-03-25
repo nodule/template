@@ -20,6 +20,7 @@
     },
     "output":{
       "out":{
+        "title":"HTML",
         "type":"string"
       }
     }

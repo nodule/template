@@ -21,12 +21,12 @@
         "type":"object",
         "title":"Input variables",
         "description":"the input variables for this template",
-        "required": true,
-        "readonly": true
+        "required": true
       }
     },
     "output":{
       "out":{
+        "title": "HTML",
         "type":"string"
       }
     }
