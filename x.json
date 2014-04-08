@@ -16,6 +16,33 @@
     {
       "ports": {
         "input": {
+          "fn": {
+            "title": "Helper Function",
+            "type": "function",
+            "description": "The handlebar helper"
+          }
+        },
+        "output": {
+          "handlebars": {
+            "title": "Handlebars",
+            "type": "function"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Adding handlebar helper"
+      },
+      "require": {
+        "handlebars": "latest"
+      },
+      "description": "Handlebar Helper",
+      "ns": "handlebar",
+      "name": "helper",
+      "fn": "handlebars.registerHelper(input.name, input.fn);\noutput.handlebars = handlebars;\n"
+    },
+    {
+      "ports": {
+        "input": {
           "body": {
             "type": "string",
             "format": "html",
@@ -28,6 +55,11 @@
             "title": "Input variables",
             "description": "the input variables for this template",
             "required": true
+          },
+          "handlebars": {
+            "type": "function",
+            "title": "Handlebars",
+            "default": null
           }
         },
         "output": {
@@ -46,7 +78,7 @@
       "description": "Handlebars Template engine",
       "ns": "template",
       "name": "handlebars",
-      "fn": "var tpl = handlebars.compile(input.body);\noutput = {\n  out: tpl(input.vars)\n}\n"
+      "fn": "var hb = input.handlebars || handlebars;\nvar tpl = hb.compile(input.body);\noutput = {\n  out: tpl(input.vars)\n}\n"
     },
     {
       "ports": {

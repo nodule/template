@@ -22,6 +22,11 @@
         "title":"Input variables",
         "description":"the input variables for this template",
         "required": true
+      },
+      "handlebars":{
+        "type":"function",
+        "title":"Handlebars",
+        "default": null
       }
     },
     "output":{
