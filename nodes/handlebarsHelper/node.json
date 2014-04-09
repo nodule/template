@@ -1,0 +1,26 @@
+{
+  "name":"handlebarsHelper",
+  "ns":"template",
+  "description":"Handlebars Helper",
+  "require":{
+    "handlebars":"latest"
+  },
+  "phrases": {
+    "active": "Adding handlebar helper"
+  },
+  "ports":{
+    "input":{
+      "fn":{
+        "title":"Helper Function",
+        "type":"function",
+        "description":"The handlebar helper"
+      }
+    },
+    "output":{
+      "handlebars":{
+        "title":"Handlebars",
+        "type":"function"
+      }
+    }
+  }
+}

@@ -16,33 +16,6 @@
     {
       "ports": {
         "input": {
-          "fn": {
-            "title": "Helper Function",
-            "type": "function",
-            "description": "The handlebar helper"
-          }
-        },
-        "output": {
-          "handlebars": {
-            "title": "Handlebars",
-            "type": "function"
-          }
-        }
-      },
-      "phrases": {
-        "active": "Adding handlebar helper"
-      },
-      "require": {
-        "handlebars": "latest"
-      },
-      "description": "Handlebar Helper",
-      "ns": "handlebar",
-      "name": "helper",
-      "fn": "handlebars.registerHelper(input.name, input.fn);\noutput.handlebars = handlebars;\n"
-    },
-    {
-      "ports": {
-        "input": {
           "body": {
             "type": "string",
             "format": "html",
@@ -79,6 +52,33 @@
       "ns": "template",
       "name": "handlebars",
       "fn": "var hb = input.handlebars || handlebars;\nvar tpl = hb.compile(input.body);\noutput = {\n  out: tpl(input.vars)\n}\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "fn": {
+            "title": "Helper Function",
+            "type": "function",
+            "description": "The handlebar helper"
+          }
+        },
+        "output": {
+          "handlebars": {
+            "title": "Handlebars",
+            "type": "function"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Adding handlebar helper"
+      },
+      "require": {
+        "handlebars": "latest"
+      },
+      "description": "Handlebars Helper",
+      "ns": "template",
+      "name": "handlebarsHelper",
+      "fn": "handlebars.registerHelper(input.name, input.fn);\noutput.handlebars = handlebars;\n"
     },
     {
       "ports": {
