@@ -56,10 +56,14 @@
     {
       "ports": {
         "input": {
+          "name": {
+            "title": "Helper Name",
+            "type": "string"
+          },
           "fn": {
             "title": "Helper Function",
             "type": "function",
-            "description": "The handlebar helper"
+            "description": "The Helper function"
           }
         },
         "output": {
