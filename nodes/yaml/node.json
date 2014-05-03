@@ -1,0 +1,28 @@
+{
+  "name":"yaml",
+  "ns":"template",
+  "description":"YAML Parser",
+  "require":{
+    "yaml":"3.x.x"
+  },
+  "phrases": {
+    "active": "Parsing YAML"
+  },
+  "ports":{
+    "input":{
+      "in":{
+        "type":"string",
+        "format":"yaml",
+        "title":"YAML",
+        "description":"The YAML string",
+        "required": true
+      }
+    },
+    "output":{
+      "out":{
+        "title":"Vars",
+        "type":"object"
+      }
+    }
+  }
+}

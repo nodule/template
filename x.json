@@ -185,6 +185,35 @@
       "ns": "template",
       "name": "mustache",
       "fn": "output = {\n  out: mustache.render(input.body, input.vars)\n}\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "in": {
+            "type": "string",
+            "format": "yaml",
+            "title": "YAML",
+            "description": "The YAML string",
+            "required": true
+          }
+        },
+        "output": {
+          "out": {
+            "title": "Vars",
+            "type": "object"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Parsing YAML"
+      },
+      "require": {
+        "yaml": "3.x.x"
+      },
+      "description": "YAML Parser",
+      "ns": "template",
+      "name": "yaml",
+      "fn": "output = {\n  out: js_yaml.safeLoad(input.in, { strict: true } )\n}\n"
     }
   ],
   "twigs": []
