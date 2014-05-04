@@ -3,7 +3,7 @@
   "ns":"template",
   "description":"YAML Parser",
   "require":{
-    "yaml":"3.x.x"
+    "js-yaml":"3.x.x"
   },
   "phrases": {
     "active": "Parsing YAML"
