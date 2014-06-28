@@ -1,7 +1,7 @@
 {
   "name":"markdown",
   "ns":"template",
-  "asyn": true,
+  "async": true,
   "description":"Markdown",
   "phrases": {
     "active": "Creating markdown document"
@@ -16,7 +16,7 @@
         "title":"Body",
         "format":"markdown",
         "description":"The body of this markdown document",
-        "asyn": true
+        "async": true
       }
     },
     "output":{

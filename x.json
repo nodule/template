@@ -171,7 +171,7 @@
             "title": "Body",
             "format": "markdown",
             "description": "The body of this markdown document",
-            "asyn": true
+            "async": true
           }
         },
         "output": {
@@ -188,7 +188,7 @@
         "active": "Creating markdown document"
       },
       "description": "Markdown",
-      "asyn": true,
+      "async": true,
       "ns": "template",
       "name": "markdown",
       "fn": "on.input.in = function() {\n  output( { out: marked(data) });\n};\n"
