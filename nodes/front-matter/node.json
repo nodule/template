@@ -1,0 +1,39 @@
+{
+  "name":"front-matter",
+  "ns":"template",
+  "async": true,
+  "description":"Extract YAML front matter",
+  "phrases": {
+    "active": "Extracting front-matter"
+  },
+  "require":{
+    "front-matter":"latest"
+  },
+  "ports":{
+    "input":{
+      "in":{
+        "type":"string",
+        "title":"Body",
+        "format":"markdown",
+        "description":"The body of this markdown document",
+        "async": true
+      }
+    },
+    "output":{
+      "out": {
+        "title":"Output",
+        "type":"object",
+        "items": {
+          "attributes": {
+            "title": "Attributes",
+            "type": "object"
+          },
+          "body": {
+            "title": "Markdown",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
