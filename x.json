@@ -17,6 +17,46 @@
     {
       "ports": {
         "input": {
+          "in": {
+            "type": "string",
+            "title": "Body",
+            "format": "markdown",
+            "description": "The body of this markdown document",
+            "async": true
+          }
+        },
+        "output": {
+          "out": {
+            "title": "Output",
+            "type": "object",
+            "items": {
+              "attributes": {
+                "title": "Attributes",
+                "type": "object"
+              },
+              "body": {
+                "title": "Markdown",
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "require": {
+        "front-matter": "latest"
+      },
+      "phrases": {
+        "active": "Extracting front-matter"
+      },
+      "description": "Extract YAML front matter",
+      "async": true,
+      "ns": "template",
+      "name": "front-matter",
+      "fn": "output = {\n  out: marked(input.in)\n}\n"
+    },
+    {
+      "ports": {
+        "input": {
           "body": {
             "type": "string",
             "format": "html",
