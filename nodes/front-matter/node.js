@@ -1,3 +1,3 @@
-output = {
-  out: marked(input.in)
-}
+on.input.in = function() {
+  output( { out: front_matter(data) });
+};

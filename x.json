@@ -11,7 +11,8 @@
     "marked": "0.x.x",
     "jade": "0.x.x",
     "handlebars": "1.x.x",
-    "js-yaml": "3.x.x"
+    "js-yaml": "3.x.x",
+    "front-matter": "^0.2.0"
   },
   "nodes": [
     {
@@ -52,7 +53,7 @@
       "async": true,
       "ns": "template",
       "name": "front-matter",
-      "fn": "output = {\n  out: marked(input.in)\n}\n"
+      "fn": "on.input.in = function() {\n  output( { out: front_matter(data) });\n};\n"
     },
     {
       "ports": {
@@ -170,7 +171,7 @@
             "title": "Body",
             "format": "markdown",
             "description": "The body of this markdown document",
-            "required": true
+            "asyn": true
           }
         },
         "output": {
@@ -187,9 +188,10 @@
         "active": "Creating markdown document"
       },
       "description": "Markdown",
+      "asyn": true,
       "ns": "template",
       "name": "markdown",
-      "fn": "output = {\n  out: marked(input.in)\n}\n"
+      "fn": "on.input.in = function() {\n  output( { out: marked(data) });\n};\n"
     },
     {
       "ports": {

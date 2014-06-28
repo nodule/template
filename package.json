@@ -16,7 +16,8 @@
     "marked": "0.x.x",
     "jade": "0.x.x",
     "handlebars": "1.x.x",
-    "js-yaml": "3.x.x"
+    "js-yaml": "3.x.x",
+    "front-matter": "^0.2.0"
   },
   "devDependencies": {
     "chit": "0.x.x"
