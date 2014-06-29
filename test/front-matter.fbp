@@ -1,0 +1,5 @@
+title: Test Frontmatter
+
+provider ./nodes/{name}/node.json
+
+FrontMatter(front-matter)

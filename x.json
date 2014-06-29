@@ -53,7 +53,7 @@
       "async": true,
       "ns": "template",
       "name": "front-matter",
-      "fn": "on.input.in = function() {\n  output( { out: front_matter(data) });\n\n  // really necessary, I would prefer a parameter to output(dat, true);\n  // maybe I could also check if the done argument is requested\n  // function(done).. ok appearently we want to determine ourselves\n  // when we are done.\n  done();\n};\n"
+      "fn": "on.input.in = function() {\n  output( { out: front_matter(data) });\n};\n"
     },
     {
       "ports": {
