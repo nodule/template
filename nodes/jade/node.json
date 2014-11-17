@@ -1,36 +1,38 @@
 {
-  "name":"jade",
-  "ns":"template",
-  "description":"Jade Template engine",
+  "name": "jade",
+  "ns": "template",
+  "description": "Jade Template engine",
   "env": "server",
-  "require":{
-    "jade":"0.x.x"
-  },
   "phrases": {
     "active": "Compiling jade template"
   },
-  "ports":{
-    "input":{
-      "body":{
-        "type":"string",
-        "format":"html",
-        "title":"Template body",
-        "description":"The body of the Jade template",
+  "ports": {
+    "input": {
+      "body": {
+        "type": "string",
+        "format": "html",
+        "title": "Template body",
+        "description": "The body of the Jade template",
         "required": true
       },
-      "vars":{
-        "type":"object",
-        "title":"Input variables",
-        "description":"the input variables for this template",
+      "vars": {
+        "type": "object",
+        "title": "Input variables",
+        "description": "the input variables for this template",
         "required": true,
         "readonly": true
       }
     },
-    "output":{
-      "out":{
-        "title":"HTML",
-        "type":"string"
+    "output": {
+      "out": {
+        "title": "HTML",
+        "type": "string"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "jade": "0.x.x"
     }
   }
 }

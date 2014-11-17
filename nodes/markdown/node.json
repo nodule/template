@@ -1,29 +1,31 @@
 {
-  "name":"markdown",
-  "ns":"template",
+  "name": "markdown",
+  "ns": "template",
   "async": true,
-  "description":"Markdown",
+  "description": "Markdown",
   "phrases": {
     "active": "Creating markdown document"
   },
-  "require":{
-    "marked":"latest"
-  },
-  "ports":{
-    "input":{
-      "in":{
-        "type":"string",
-        "title":"Body",
-        "format":"markdown",
-        "description":"The body of this markdown document",
+  "ports": {
+    "input": {
+      "in": {
+        "type": "string",
+        "title": "Body",
+        "format": "markdown",
+        "description": "The body of this markdown document",
         "async": true
       }
     },
-    "output":{
-      "out":{
-        "title":"HTML",
-        "type":"string"
+    "output": {
+      "out": {
+        "title": "HTML",
+        "type": "string"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "marked": "latest"
     }
   }
 }

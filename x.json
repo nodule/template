@@ -16,6 +16,11 @@
   },
   "nodes": [
     {
+      "dependencies": {
+        "npm": {
+          "front-matter": "latest"
+        }
+      },
       "ports": {
         "input": {
           "in": {
@@ -43,9 +48,6 @@
           }
         }
       },
-      "require": {
-        "front-matter": "latest"
-      },
       "phrases": {
         "active": "Extracting front-matter"
       },
@@ -56,6 +58,11 @@
       "fn": "on.input.in = function() {\n  output( { out: front_matter(data) });\n};\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "handlebars": "latest"
+        }
+      },
       "ports": {
         "input": {
           "body": {
@@ -87,15 +94,17 @@
       "phrases": {
         "active": "Compiling handlebars template"
       },
-      "require": {
-        "handlebars": "latest"
-      },
       "description": "Handlebars Template engine",
       "ns": "template",
       "name": "handlebars",
       "fn": "var hb = input.handlebars || handlebars;\nvar tpl = hb.compile(input.body);\noutput = {\n  out: tpl(input.vars)\n}\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "handlebars": "latest"
+        }
+      },
       "ports": {
         "input": {
           "name": {
@@ -118,15 +127,17 @@
       "phrases": {
         "active": "Adding handlebar helper"
       },
-      "require": {
-        "handlebars": "latest"
-      },
       "description": "Handlebars Helper",
       "ns": "template",
       "name": "handlebarsHelper",
       "fn": "handlebars.registerHelper(input.name, input.fn);\noutput.handlebars = handlebars;\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "jade": "0.x.x"
+        }
+      },
       "ports": {
         "input": {
           "body": {
@@ -154,9 +165,6 @@
       "phrases": {
         "active": "Compiling jade template"
       },
-      "require": {
-        "jade": "0.x.x"
-      },
       "env": "server",
       "description": "Jade Template engine",
       "ns": "template",
@@ -164,6 +172,11 @@
       "fn": "output = {\n  out: jade.render(input.body, input.vars)\n}\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "marked": "latest"
+        }
+      },
       "ports": {
         "input": {
           "in": {
@@ -181,9 +194,6 @@
           }
         }
       },
-      "require": {
-        "marked": "latest"
-      },
       "phrases": {
         "active": "Creating markdown document"
       },
@@ -194,6 +204,11 @@
       "fn": "on.input.in = function() {\n  output( { out: marked(data) });\n};\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "mustache": "latest"
+        }
+      },
       "ports": {
         "input": {
           "body": {
@@ -221,15 +236,17 @@
       "phrases": {
         "active": "Compiling mustache template"
       },
-      "require": {
-        "mustache": "latest"
-      },
       "description": "Mustache Template engine",
       "ns": "template",
       "name": "mustache",
       "fn": "output = {\n  out: mustache.render(input.body, input.vars)\n}\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "js-yaml": "3.x.x"
+        }
+      },
       "ports": {
         "input": {
           "in": {
@@ -249,9 +266,6 @@
       },
       "phrases": {
         "active": "Parsing YAML"
-      },
-      "require": {
-        "js-yaml": "3.x.x"
       },
       "description": "YAML Parser",
       "ns": "template",

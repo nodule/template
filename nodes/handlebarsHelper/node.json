@@ -1,30 +1,32 @@
 {
-  "name":"handlebarsHelper",
-  "ns":"template",
-  "description":"Handlebars Helper",
-  "require":{
-    "handlebars":"latest"
-  },
+  "name": "handlebarsHelper",
+  "ns": "template",
+  "description": "Handlebars Helper",
   "phrases": {
     "active": "Adding handlebar helper"
   },
-  "ports":{
-    "input":{
-      "name":{
-        "title":"Helper Name",
-        "type":"string"
+  "ports": {
+    "input": {
+      "name": {
+        "title": "Helper Name",
+        "type": "string"
       },
-      "fn":{
-        "title":"Helper Function",
-        "type":"function",
-        "description":"The Helper function"
+      "fn": {
+        "title": "Helper Function",
+        "type": "function",
+        "description": "The Helper function"
       }
     },
-    "output":{
-      "handlebars":{
-        "title":"Handlebars",
-        "type":"function"
+    "output": {
+      "handlebars": {
+        "title": "Handlebars",
+        "type": "function"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "handlebars": "latest"
     }
   }
 }

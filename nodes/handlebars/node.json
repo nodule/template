@@ -1,39 +1,41 @@
 {
-  "name":"handlebars",
-  "ns":"template",
-  "description":"Handlebars Template engine",
-  "require":{
-    "handlebars":"latest"
-  },
+  "name": "handlebars",
+  "ns": "template",
+  "description": "Handlebars Template engine",
   "phrases": {
     "active": "Compiling handlebars template"
   },
-  "ports":{
-    "input":{
-      "body":{
-        "type":"string",
-        "format":"html",
-        "title":"Template body",
-        "description":"The body of the handlebars template",
+  "ports": {
+    "input": {
+      "body": {
+        "type": "string",
+        "format": "html",
+        "title": "Template body",
+        "description": "The body of the handlebars template",
         "required": true
       },
-      "vars":{
-        "type":"object",
-        "title":"Input variables",
-        "description":"the input variables for this template",
+      "vars": {
+        "type": "object",
+        "title": "Input variables",
+        "description": "the input variables for this template",
         "required": true
       },
-      "handlebars":{
-        "type":"function",
-        "title":"Handlebars",
+      "handlebars": {
+        "type": "function",
+        "title": "Handlebars",
         "default": null
       }
     },
-    "output":{
-      "out":{
+    "output": {
+      "out": {
         "title": "HTML",
-        "type":"string"
+        "type": "string"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "handlebars": "latest"
     }
   }
 }

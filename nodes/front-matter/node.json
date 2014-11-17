@@ -1,28 +1,25 @@
 {
-  "name":"front-matter",
-  "ns":"template",
+  "name": "front-matter",
+  "ns": "template",
   "async": true,
-  "description":"Extract YAML front matter",
+  "description": "Extract YAML front matter",
   "phrases": {
     "active": "Extracting front-matter"
   },
-  "require":{
-    "front-matter":"latest"
-  },
-  "ports":{
-    "input":{
-      "in":{
-        "type":"string",
-        "title":"Body",
-        "format":"markdown",
-        "description":"The body of this markdown document",
+  "ports": {
+    "input": {
+      "in": {
+        "type": "string",
+        "title": "Body",
+        "format": "markdown",
+        "description": "The body of this markdown document",
         "async": true
       }
     },
-    "output":{
+    "output": {
       "out": {
-        "title":"Output",
-        "type":"object",
+        "title": "Output",
+        "type": "object",
         "items": {
           "attributes": {
             "title": "Attributes",
@@ -34,6 +31,11 @@
           }
         }
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "front-matter": "latest"
     }
   }
 }
