@@ -18,7 +18,7 @@
         "type": "object",
         "title": "Input variables",
         "description": "the input variables for this template",
-        "required": true
+        "default": {}
       },
       "handlebars": {
         "type": "function",
