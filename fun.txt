@@ -1,9 +1,0 @@
-Ok, I just will not just load one node without a map.
-
-I create, just like chix-compile.
-
-A map with unconnected nodes, with their test data and run that.
-
-This doesn't cover the api test yet though with twigs/actions
-Anyway, that's just a matter of creating the graph and also
-providing a test.json along with it for fixture data.
