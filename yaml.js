@@ -24,7 +24,7 @@ module.exports = {
   },
   dependencies: {
     npm: {
-      "js-yaml": require("js-yaml")
+      "js-yaml": require('js-yaml')
     }
   },
   fn: function yaml(input, output, state, done, cb, on, js_yaml) {

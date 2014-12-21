@@ -32,7 +32,7 @@ module.exports = {
   },
   dependencies: {
     npm: {
-      jade: require("jade")
+      jade: require('jade')
     }
   },
   fn: function jade(input, output, state, done, cb, on, jade) {
