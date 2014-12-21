@@ -89,7 +89,7 @@ module.exports = {
   },
   dependencies: {
     npm: {
-      "front-matter": "latest"
+      "front-matter": require("front-matter")
     }
   },
   state: {}

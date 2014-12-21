@@ -35,7 +35,7 @@ module.exports = {
   },
   dependencies: {
     npm: {
-      handlebars: "latest"
+      handlebars: require("handlebars")
     }
   },
   fn: function handlebars(input, output, state, done, cb, on, handlebars) {

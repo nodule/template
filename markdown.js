@@ -141,7 +141,7 @@ module.exports = {
   },
   dependencies: {
     npm: {
-      marked: "latest"
+      marked: require("marked")
     }
   },
   state: {}

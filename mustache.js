@@ -31,7 +31,7 @@ module.exports = {
   },
   dependencies: {
     npm: {
-      mustache: "latest"
+      mustache: require("mustache")
     }
   },
   fn: function mustache(input, output, state, done, cb, on, mustache) {
