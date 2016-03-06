@@ -7,12 +7,13 @@
     "url": "https://github.com/nodule/template.git"
   },
   "dependencies": {
-    "mustache": "0.x.x",
-    "marked": "0.x.x",
-    "jade": "0.x.x",
-    "handlebars": "1.x.x",
+    "es6-template-strings": "^2.0.0",
+    "front-matter": "^1.0.0",
+    "handlebars": "3.x.x",
+    "jade": "1.x.x",
     "js-yaml": "3.x.x",
-    "front-matter": "^0.2.0"
+    "marked": "0.x.x",
+    "mustache": "1.x.x"
   },
   "nodes": [
     {
@@ -240,6 +241,44 @@
       "ns": "template",
       "name": "mustache",
       "fn": "output = {\n  out: mustache.render(input.body, input.vars)\n}\n"
+    },
+    {
+      "dependencies": {
+        "npm": {
+          "es6-template-strings": "latest"
+        }
+      },
+      "ports": {
+        "input": {
+          "in": {
+            "type": "object",
+            "title": "Input",
+            "description": "Input values",
+            "required": true,
+            "async": true
+          },
+          "template": {
+            "type": "string",
+            "title": "String",
+            "description": "Template string",
+            "required": true
+          }
+        },
+        "output": {
+          "out": {
+            "title": "String",
+            "type": "object"
+          }
+        }
+      },
+      "async": true,
+      "phrases": {
+        "active": "Applying template string"
+      },
+      "description": "Compile and resolve template strings notation as specified in ES6",
+      "ns": "template",
+      "name": "string",
+      "fn": "on.input.in = function() {\n  output({\n    out: es6_template_strings(input.template, data)\n  })\n}\n"
     },
     {
       "dependencies": {

@@ -1,0 +1,37 @@
+{
+  "name": "string",
+  "ns": "template",
+  "description": "Compile and resolve template strings notation as specified in ES6",
+  "phrases": {
+    "active": "Applying template string"
+  },
+  "async": true,
+  "ports": {
+    "input": {
+      "in": {
+        "type": "object",
+        "title": "Input",
+        "description": "Input values",
+        "required": true,
+        "async": true
+      },
+      "template": {
+        "type": "string",
+        "title": "String",
+        "description": "Template string",
+        "required": true
+      }
+    },
+    "output": {
+      "out": {
+        "title": "String",
+        "type": "object"
+      }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "es6-template-strings": "latest"
+    }
+  }
+}

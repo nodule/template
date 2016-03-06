@@ -12,12 +12,13 @@
     "node": ">=0.6.0"
   },
   "dependencies": {
-    "mustache": "1.x.x",
-    "marked": "0.x.x",
-    "jade": "1.x.x",
+    "es6-template-strings": "^2.0.0",
+    "front-matter": "^1.0.0",
     "handlebars": "3.x.x",
+    "jade": "1.x.x",
     "js-yaml": "3.x.x",
-    "front-matter": "^1.0.0"
+    "marked": "0.x.x",
+    "mustache": "1.x.x"
   },
   "devDependencies": {
     "chit": "0.4.5"

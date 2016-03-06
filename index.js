@@ -5,5 +5,6 @@ module.exports = {
   jade: require('./jade'),
   markdown: require('./markdown'),
   mustache: require('./mustache'),
+  string: require('./string'),
   yaml: require('./yaml')
 }
