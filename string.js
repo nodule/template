@@ -34,7 +34,7 @@ module.exports = {
   },
   fn: function string(input, output, state, done, cb, on, es6_template_strings) {
     var r = function() {
-      output.out = es6_template_strings(input.template, data)
+      output.out = es6_template_strings(input.template, input.in)
     }.call(this);
     return {
       output: output,

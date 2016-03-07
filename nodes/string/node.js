@@ -1,1 +1,1 @@
-output.out = es6_template_strings(input.template, data)
+output.out = es6_template_strings(input.template, input.in)

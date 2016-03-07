@@ -276,7 +276,7 @@
       "description": "Compile and resolve template strings notation as specified in ES6",
       "ns": "template",
       "name": "string",
-      "fn": "output.out = es6_template_strings(input.template, data)\n"
+      "fn": "output.out = es6_template_strings(input.template, input.in)\n"
     },
     {
       "dependencies": {
