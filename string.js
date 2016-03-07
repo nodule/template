@@ -5,26 +5,13 @@ module.exports = {
   phrases: {
     active: "Applying template string"
   },
-  async: true,
   ports: {
     input: {
       "in": {
         type: "object",
         title: "Input",
         description: "Input values",
-        required: true,
-        async: true,
-        fn: function __IN__(data, x, source, state, input, output, es6_template_strings) {
-          var r = function() {
-            output({
-              out: es6_template_strings(input.template, data)
-            })
-          }.call(this);
-          return {
-            state: state,
-            return: r
-          };
-        }
+        required: true
       },
       template: {
         type: "string",
@@ -45,5 +32,15 @@ module.exports = {
       "es6-template-strings": require('es6-template-strings')
     }
   },
-  state: {}
+  fn: function string(input, output, state, done, cb, on, es6_template_strings) {
+    var r = function() {
+      output.out = es6_template_strings(input.template, data)
+    }.call(this);
+    return {
+      output: output,
+      state: state,
+      on: on,
+      return: r
+    };
+  }
 }

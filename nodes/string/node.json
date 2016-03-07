@@ -5,15 +5,13 @@
   "phrases": {
     "active": "Applying template string"
   },
-  "async": true,
   "ports": {
     "input": {
       "in": {
         "type": "object",
         "title": "Input",
         "description": "Input values",
-        "required": true,
-        "async": true
+        "required": true
       },
       "template": {
         "type": "string",
