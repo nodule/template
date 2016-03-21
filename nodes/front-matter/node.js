@@ -1,3 +1,3 @@
 on.input.in = function() {
-  output( { out: front_matter($.in) });
+  output( { out: $.write('in', front_matter($.in)) });
 };

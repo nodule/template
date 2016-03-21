@@ -1,3 +1,1 @@
-output = {
-  out: mustache.render($.body, $.vars)
-}
+output = {out: $.create(mustache.render($.body, $.vars))}

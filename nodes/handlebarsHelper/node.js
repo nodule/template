@@ -1,2 +1,2 @@
 handlebars.registerHelper($.name, $.fn);
-output.handlebars = handlebars;
+output.handlebars = $.create(handlebars);

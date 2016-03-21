@@ -1,3 +1,3 @@
 on.input.in = function() {
-  output( { out: marked($.in) });
+  output( { out: $.write('in', marked($.in)) });
 };
