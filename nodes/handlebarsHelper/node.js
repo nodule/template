@@ -1,2 +1,2 @@
-handlebars.registerHelper(input.name, input.fn);
+handlebars.registerHelper($.name, $.fn);
 output.handlebars = handlebars;

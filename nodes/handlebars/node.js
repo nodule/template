@@ -1,5 +1,5 @@
-var hb = input.handlebars || handlebars;
-var tpl = hb.compile(input.body);
+var hb = $.handlebars || handlebars;
+var tpl = hb.compile($.body);
 output = {
-  out: tpl(input.vars)
+  out: tpl($.vars)
 }

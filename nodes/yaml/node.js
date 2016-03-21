@@ -1,3 +1,3 @@
 output = {
-  out: js_yaml.safeLoad(input.in, { strict: true } )
+  out: js_yaml.safeLoad($.in, { strict: true } )
 }

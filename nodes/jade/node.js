@@ -1,3 +1,3 @@
 output = {
-  out: jade.render(input.body, input.vars)
+  out: jade.render($.body, $.vars)
 }
