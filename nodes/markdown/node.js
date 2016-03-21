@@ -1,3 +1,3 @@
 on.input.in = function() {
-  output( { out: marked(data) });
+  output( { out: marked(input.in) });
 };
