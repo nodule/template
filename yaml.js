@@ -27,12 +27,12 @@ module.exports = {
       "js-yaml": require('js-yaml')
     }
   },
-  fn: function yaml(input, output, state, done, cb, on, js_yaml) {
+  fn: function yaml(input, $, output, state, done, cb, on, js_yaml) {
     var r = function() {
       output = {
-        out: js_yaml.safeLoad(input.in, {
+        out: $.write('in', js_yaml.safeLoad($.in, {
           strict: true
-        })
+        }))
       }
     }.call(this);
     return {

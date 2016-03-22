@@ -32,9 +32,9 @@ module.exports = {
       "es6-template-strings": require('es6-template-strings')
     }
   },
-  fn: function string(input, output, state, done, cb, on, es6_template_strings) {
+  fn: function string(input, $, output, state, done, cb, on, es6_template_strings) {
     var r = function() {
-      output.out = es6_template_strings(input.template, input.in)
+      output.out = $.write('in', es6_template_strings($.template, $.in))
     }.call(this);
     return {
       output: output,

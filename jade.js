@@ -35,10 +35,10 @@ module.exports = {
       jade: require('jade')
     }
   },
-  fn: function jade(input, output, state, done, cb, on, jade) {
+  fn: function jade(input, $, output, state, done, cb, on, jade) {
     var r = function() {
       output = {
-        out: jade.render(input.body, input.vars)
+        out: $.create(jade.render($.body, $.vars))
       }
     }.call(this);
     return {

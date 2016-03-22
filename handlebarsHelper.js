@@ -29,10 +29,10 @@ module.exports = {
       handlebars: require('handlebars')
     }
   },
-  fn: function handlebarsHelper(input, output, state, done, cb, on, handlebars) {
+  fn: function handlebarsHelper(input, $, output, state, done, cb, on, handlebars) {
     var r = function() {
-      handlebars.registerHelper(input.name, input.fn);
-      output.handlebars = handlebars;
+      handlebars.registerHelper($.name, $.fn);
+      output.handlebars = $.create(handlebars);
     }.call(this);
     return {
       output: output,

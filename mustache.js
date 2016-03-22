@@ -34,10 +34,10 @@ module.exports = {
       mustache: require('mustache')
     }
   },
-  fn: function mustache(input, output, state, done, cb, on, mustache) {
+  fn: function mustache(input, $, output, state, done, cb, on, mustache) {
     var r = function() {
       output = {
-        out: mustache.render(input.body, input.vars)
+        out: $.create(mustache.render($.body, $.vars))
       }
     }.call(this);
     return {

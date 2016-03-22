@@ -56,7 +56,7 @@
       "async": true,
       "ns": "template",
       "name": "front-matter",
-      "fn": "on.input.in = function() {\n  output( { out: front_matter(data) });\n};\n"
+      "fn": "on.input.in = function() {\n  output( { out: $.write('in', front_matter($.in)) });\n};\n"
     },
     {
       "dependencies": {
@@ -98,7 +98,7 @@
       "description": "Handlebars Template engine",
       "ns": "template",
       "name": "handlebars",
-      "fn": "var hb = input.handlebars || handlebars;\nvar tpl = hb.compile(input.body);\noutput = {\n  out: tpl(input.vars)\n}\n"
+      "fn": "var hb = $.handlebars || handlebars;\nvar tpl = hb.compile($.body);\noutput = {out: $.create(tpl($.vars))}\n"
     },
     {
       "dependencies": {
@@ -131,7 +131,7 @@
       "description": "Handlebars Helper",
       "ns": "template",
       "name": "handlebarsHelper",
-      "fn": "handlebars.registerHelper(input.name, input.fn);\noutput.handlebars = handlebars;\n"
+      "fn": "handlebars.registerHelper($.name, $.fn);\noutput.handlebars = $.create(handlebars);\n"
     },
     {
       "dependencies": {
@@ -170,7 +170,7 @@
       "description": "Jade Template engine",
       "ns": "template",
       "name": "jade",
-      "fn": "output = {\n  out: jade.render(input.body, input.vars)\n}\n"
+      "fn": "output = {out: $.create(jade.render($.body, $.vars))}\n"
     },
     {
       "dependencies": {
@@ -202,7 +202,7 @@
       "async": true,
       "ns": "template",
       "name": "markdown",
-      "fn": "on.input.in = function() {\n  output( { out: marked(data) });\n};\n"
+      "fn": "on.input.in = function() {\n  output( { out: $.write('in', marked($.in)) });\n};\n"
     },
     {
       "dependencies": {
@@ -240,7 +240,7 @@
       "description": "Mustache Template engine",
       "ns": "template",
       "name": "mustache",
-      "fn": "output = {\n  out: mustache.render(input.body, input.vars)\n}\n"
+      "fn": "output = {out: $.create(mustache.render($.body, $.vars))}\n"
     },
     {
       "dependencies": {
@@ -276,7 +276,7 @@
       "description": "Compile and resolve template strings notation as specified in ES6",
       "ns": "template",
       "name": "string",
-      "fn": "output.out = es6_template_strings(input.template, input.in)\n"
+      "fn": "output.out = $.write('in', es6_template_strings($.template, $.in))\n"
     },
     {
       "dependencies": {
@@ -307,7 +307,7 @@
       "description": "YAML Parser",
       "ns": "template",
       "name": "yaml",
-      "fn": "output = {\n  out: js_yaml.safeLoad(input.in, { strict: true } )\n}\n"
+      "fn": "output = {out: $.write('in', js_yaml.safeLoad($.in, { strict: true }))}\n"
     }
   ],
   "twigs": []

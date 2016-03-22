@@ -38,12 +38,12 @@ module.exports = {
       handlebars: require('handlebars')
     }
   },
-  fn: function handlebars(input, output, state, done, cb, on, handlebars) {
+  fn: function handlebars(input, $, output, state, done, cb, on, handlebars) {
     var r = function() {
-      var hb = input.handlebars || handlebars;
-      var tpl = hb.compile(input.body);
+      var hb = $.handlebars || handlebars;
+      var tpl = hb.compile($.body);
       output = {
-        out: tpl(input.vars)
+        out: $.create(tpl($.vars))
       }
     }.call(this);
     return {
