@@ -14,7 +14,7 @@ module.exports = {
         format: "markdown",
         description: "The body of this markdown document",
         async: true,
-        fn: function __IN__(data, x, source, state, input, output, marked) {
+        fn: function __IN__(data, source, state, input, $, output, marked) {
           var r = function() {
             output({
               out: $.write('in', marked($.in))
