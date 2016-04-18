@@ -308,7 +308,306 @@
       "ns": "template",
       "name": "yaml",
       "fn": "output = {out: $.write('in', js_yaml.safeLoad($.in, { strict: true }))}\n"
+    },
+    {
+      "type": "flow",
+      "nodes": [
+        {
+          "id": "Handlebars",
+          "title": "Handlebars",
+          "ns": "template",
+          "name": "handlebars"
+        },
+        {
+          "id": "ReadFile",
+          "title": "ReadFile",
+          "ns": "fs",
+          "name": "readFile"
+        }
+      ],
+      "links": [
+        {
+          "source": {
+            "id": "ReadFile",
+            "port": "out"
+          },
+          "target": {
+            "id": "Handlebars",
+            "port": "body"
+          },
+          "metadata": {
+            "title": "ReadFile out -> body Handlebars"
+          }
+        }
+      ],
+      "title": "Read handlebars file",
+      "description": "Reads a handlebar file",
+      "ports": {
+        "input": {
+          "file": {
+            "nodeId": "ReadFile",
+            "title": "File",
+            "name": "file"
+          },
+          "vars": {
+            "nodeId": "Handlebars",
+            "title": "Vars",
+            "name": "vars"
+          }
+        },
+        "output": {
+          "out": {
+            "nodeId": "Handlebars",
+            "title": "Out",
+            "name": "out"
+          }
+        }
+      },
+      "providers": {
+        "@": {
+          "url": "https://serve-chix.rhcloud.com/nodes/{ns}/{name}"
+        }
+      },
+      "ns": "template",
+      "name": "readHandleBarsFile"
+    },
+    {
+      "type": "flow",
+      "nodes": [
+        {
+          "id": "Markdown",
+          "title": "Markdown",
+          "ns": "template",
+          "name": "markdown"
+        },
+        {
+          "id": "ReadFile",
+          "title": "ReadFile",
+          "ns": "fs",
+          "name": "readFile"
+        }
+      ],
+      "links": [
+        {
+          "source": {
+            "id": "ReadFile",
+            "port": "out"
+          },
+          "target": {
+            "id": "Markdown",
+            "port": "in"
+          },
+          "metadata": {
+            "title": "ReadFile out -> in Markdown"
+          }
+        }
+      ],
+      "title": "Read markdown file",
+      "description": "Reads a markdown file",
+      "ports": {
+        "input": {
+          "file": {
+            "nodeId": "ReadFile",
+            "title": "File",
+            "name": "file"
+          }
+        },
+        "output": {
+          "out": {
+            "nodeId": "Markdown",
+            "title": "Out",
+            "name": "out"
+          }
+        }
+      },
+      "providers": {
+        "@": {
+          "url": "https://serve-chix.rhcloud.com/nodes/{ns}/{name}"
+        }
+      },
+      "ns": "template",
+      "name": "readMarkdownFile"
+    },
+    {
+      "type": "flow",
+      "nodes": [
+        {
+          "id": "Mustache",
+          "title": "Mustache",
+          "ns": "template",
+          "name": "mustache"
+        },
+        {
+          "id": "ReadFile",
+          "title": "ReadFile",
+          "ns": "fs",
+          "name": "readFile"
+        }
+      ],
+      "links": [
+        {
+          "source": {
+            "id": "ReadFile",
+            "port": "out"
+          },
+          "target": {
+            "id": "Mustache",
+            "port": "body"
+          },
+          "metadata": {
+            "title": "ReadFile out -> body Mustache"
+          }
+        }
+      ],
+      "title": "Read mustache file",
+      "description": "Reads mustache file",
+      "ports": {
+        "input": {
+          "file": {
+            "nodeId": "ReadFile",
+            "title": "File",
+            "name": "file"
+          },
+          "vars": {
+            "nodeId": "Mustache",
+            "title": "Vars",
+            "name": "vars"
+          }
+        },
+        "output": {
+          "out": {
+            "nodeId": "Handlebars",
+            "title": "Out",
+            "name": "out"
+          }
+        }
+      },
+      "providers": {
+        "@": {
+          "url": "https://serve-chix.rhcloud.com/nodes/{ns}/{name}"
+        }
+      },
+      "ns": "template",
+      "name": "readMustacheFile"
+    },
+    {
+      "type": "flow",
+      "nodes": [
+        {
+          "id": "TemplateString",
+          "title": "TemplateString",
+          "ns": "template",
+          "name": "string"
+        },
+        {
+          "id": "ReadFile",
+          "title": "ReadFile",
+          "ns": "fs",
+          "name": "readFile"
+        }
+      ],
+      "links": [
+        {
+          "source": {
+            "id": "ReadFile",
+            "port": "out"
+          },
+          "target": {
+            "id": "TemplateString",
+            "port": "in"
+          },
+          "metadata": {
+            "title": "ReadFile out -> in TemplateString"
+          }
+        }
+      ],
+      "title": "Read template string file",
+      "description": "Reads an es6 template string file",
+      "ports": {
+        "input": {
+          "file": {
+            "nodeId": "ReadFile",
+            "title": "File",
+            "name": "file"
+          },
+          "vars": {
+            "nodeId": "TemplateString",
+            "title": "Vars",
+            "name": "in"
+          }
+        },
+        "output": {
+          "out": {
+            "nodeId": "TemplateString",
+            "title": "Out",
+            "name": "out"
+          }
+        }
+      },
+      "providers": {
+        "@": {
+          "url": "https://serve-chix.rhcloud.com/nodes/{ns}/{name}"
+        }
+      },
+      "ns": "template",
+      "name": "readTemplateString"
+    },
+    {
+      "type": "flow",
+      "nodes": [
+        {
+          "id": "YAML",
+          "title": "YAML",
+          "ns": "template",
+          "name": "yaml"
+        },
+        {
+          "id": "ReadFile",
+          "title": "ReadFile",
+          "ns": "fs",
+          "name": "readFile"
+        }
+      ],
+      "links": [
+        {
+          "source": {
+            "id": "ReadFile",
+            "port": "out"
+          },
+          "target": {
+            "id": "YAML",
+            "port": "in"
+          },
+          "metadata": {
+            "title": "ReadFile out -> in YAML"
+          }
+        }
+      ],
+      "title": "Read yaml file",
+      "description": "Reads a yaml file",
+      "ports": {
+        "input": {
+          "file": {
+            "nodeId": "ReadFile",
+            "title": "File",
+            "name": "file"
+          }
+        },
+        "output": {
+          "out": {
+            "nodeId": "YAML",
+            "title": "Out",
+            "name": "out"
+          }
+        }
+      },
+      "providers": {
+        "@": {
+          "url": "https://serve-chix.rhcloud.com/nodes/{ns}/{name}"
+        }
+      },
+      "ns": "template",
+      "name": "readYamlFile"
     }
-  ],
-  "twigs": []
+  ]
 }

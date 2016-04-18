@@ -2,9 +2,10 @@ title: Read handlebars file
 description: Reads a handlebar file
 
 Handlebars(template/handlebars)
+ReadFile(fs/readFile)
 
-->  file ReadFile(fs/readFile)
-->  vars Handlebars
+-> file ReadFile
+-> vars Handlebars
 
 ReadFile out -> body Handlebars
 
