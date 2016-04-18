@@ -1,0 +1,10 @@
+title: Read yaml file
+description: Reads a yaml file
+
+YAML(template/yaml)
+
+-> file ReadFile(fs/readFile)
+
+ReadFile out -> in YAML
+
+<- out YAML

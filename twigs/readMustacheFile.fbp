@@ -1,0 +1,11 @@
+title: Read mustache file
+description: Reads mustache file
+
+Mustache(template/mustache)
+
+->  file ReadFile(fs/readFile)
+->  vars Mustache
+
+ReadFile out -> body Mustache
+
+<- out Handlebars

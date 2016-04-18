@@ -1,0 +1,11 @@
+title: Read handlebars file
+description: Reads a handlebar file
+
+Handlebars(template/handlebars)
+
+->  file ReadFile(fs/readFile)
+->  vars Handlebars
+
+ReadFile out -> body Handlebars
+
+<- out Handlebars

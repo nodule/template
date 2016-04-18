@@ -1,0 +1,11 @@
+title: Read template string file
+description: Reads an es6 template string file
+
+TemplateString(template/string)
+
+-> file ReadFile(fs/readFile)
+-> in:vars TemplateString
+
+ReadFile out -> in TemplateString
+
+<- out TemplateString

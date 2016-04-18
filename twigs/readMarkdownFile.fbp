@@ -1,0 +1,10 @@
+title: Read markdown file
+description: Reads a markdown file
+
+Markdown(template/markdown)
+
+->  file ReadFile(fs/readFile)
+
+ReadFile out -> in Markdown
+
+<- out Markdown
