@@ -1,0 +1,11 @@
+name: "MarkdownTest"
+topic: "template/markdown"
+cases:
+-
+  name: 'sending markdown'
+  assertion: 'should pass'
+  inputs:
+    in: '# Test Shall Pass'
+  expect:
+    out:
+      equals: "<h1 id=\"test-shall-pass\">Test Shall Pass</h1>\n"
