@@ -1,0 +1,66 @@
+---
+name: front-matter test
+topic: template/front-matter
+cases:
+  - assertion: should pass
+    name: front-matter test
+    inputs:
+      in: |-
+        ---
+        title: Front matter test
+        tags:
+          - one
+          - two
+        ---
+        #hi!
+    expect:
+      out:
+        equals:
+          attributes:
+            title: Front matter test
+            tags:
+              - one
+              - two
+          body: '#hi!'
+
+---
+name: handlebars test
+topic: template/handlebars
+cases:
+  - assertion: should pass
+    name: handlebars test
+    inputs:
+      body: ' <h1>{{title}}</h1>'
+      vars:
+        title: Some Title
+    expect:
+      out:
+        equals: <h1>Some Title</h1>
+
+---
+name: markdown test
+topic: template/markdown
+cases:
+  - assertion: should pass
+    name: markdown test
+    inputs:
+      in: '# Test Shall Pass'
+    expect:
+      out:
+        equals: |
+          <h1 id="test-shall-pass">Test Shall Pass</h1>
+
+---
+name: mustache test
+topic: template/mustache
+cases:
+  - assertion: should pass
+    name: mustache test
+    inputs:
+      body: '{{first}} {{last}}'
+      vars:
+        first: John
+        last: Doe
+    expect:
+      out:
+        equals: John Doe

@@ -1,0 +1,9 @@
+cases:
+-
+  inputs:
+    body: ' <h1>{{title}}</h1>'
+    vars:
+      title: "Some Title"
+  expect:
+    out:
+      equals: "<h1>Some Title</h1>"

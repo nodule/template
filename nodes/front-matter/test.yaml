@@ -1,17 +1,11 @@
-name: "TestFrontMatter"
-topic: "template/front-matter"
 cases:
 -
-  name: 'sending front-matter'
-  assertion: 'should pass'
   inputs:
     in: "---\ntitle: Front matter test\ntags:\n  - one\n  - two\n---\n#hi!"
   expect:
     out:
-      equals: {
-        "attributes": {
-          "title": "Front matter test",
-          "tags": ["one", "two"]
-        },
-        "body": "#hi!"
-      }
+      equals:
+        attributes:
+          title: "Front matter test"
+          tags: ["one", "two"]
+        body: "#hi!"

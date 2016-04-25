@@ -1,9 +1,5 @@
-name: "MarkdownTest"
-topic: "template/markdown"
 cases:
 -
-  name: 'sending markdown'
-  assertion: 'should pass'
   inputs:
     in: '# Test Shall Pass'
   expect:

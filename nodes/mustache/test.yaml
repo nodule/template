@@ -1,0 +1,10 @@
+cases:
+-
+  inputs:
+    body: '{{first}} {{last}}'
+    vars:
+      first: "John"
+      last: "Doe"
+  expect:
+    out:
+      equals: "John Doe"
