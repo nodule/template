@@ -1,9 +1,9 @@
 ---
-name: front-matter test
+            name: front-matter test
 topic: template/front-matter
 cases:
-  - assertion: should pass
-    name: front-matter test
+  - name: front-matter test
+    assertion: should pass
     inputs:
       in: |-
         ---
@@ -24,11 +24,11 @@ cases:
           body: '#hi!'
 
 ---
-name: handlebars test
+            name: handlebars test
 topic: template/handlebars
 cases:
-  - assertion: should pass
-    name: handlebars test
+  - name: handlebars test
+    assertion: should pass
     inputs:
       body: ' <h1>{{title}}</h1>'
       vars:
@@ -38,11 +38,11 @@ cases:
         equals: <h1>Some Title</h1>
 
 ---
-name: markdown test
+            name: markdown test
 topic: template/markdown
 cases:
-  - assertion: should pass
-    name: markdown test
+  - name: markdown test
+    assertion: should pass
     inputs:
       in: '# Test Shall Pass'
     expect:
@@ -51,11 +51,11 @@ cases:
           <h1 id="test-shall-pass">Test Shall Pass</h1>
 
 ---
-name: mustache test
+            name: mustache test
 topic: template/mustache
 cases:
-  - assertion: should pass
-    name: mustache test
+  - name: mustache test
+    assertion: should pass
     inputs:
       body: '{{first}} {{last}}'
       vars:

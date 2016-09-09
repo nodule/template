@@ -17,10 +17,12 @@
   },
   "nodes": [
     {
-      "dependencies": {
-        "npm": {
-          "front-matter": "latest"
-        }
+      "name": "front-matter",
+      "ns": "template",
+      "async": true,
+      "description": "Extract YAML front matter",
+      "phrases": {
+        "active": "Extracting front-matter"
       },
       "ports": {
         "input": {
@@ -49,20 +51,19 @@
           }
         }
       },
-      "phrases": {
-        "active": "Extracting front-matter"
+      "dependencies": {
+        "npm": {
+          "front-matter": "latest"
+        }
       },
-      "description": "Extract YAML front matter",
-      "async": true,
-      "ns": "template",
-      "name": "front-matter",
       "fn": "on.input.in = function() {\n  output( { out: $.write('in', front_matter($.in)) });\n};\n"
     },
     {
-      "dependencies": {
-        "npm": {
-          "handlebars": "latest"
-        }
+      "name": "handlebars",
+      "ns": "template",
+      "description": "Handlebars Template engine",
+      "phrases": {
+        "active": "Compiling handlebars template"
       },
       "ports": {
         "input": {
@@ -92,19 +93,19 @@
           }
         }
       },
-      "phrases": {
-        "active": "Compiling handlebars template"
-      },
-      "description": "Handlebars Template engine",
-      "ns": "template",
-      "name": "handlebars",
-      "fn": "var hb = $.handlebars || handlebars;\nvar tpl = hb.compile($.body);\noutput = {out: $.create(tpl($.vars))}\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "handlebars": "latest"
         }
+      },
+      "fn": "var hb = $.handlebars || handlebars;\nvar tpl = hb.compile($.body);\noutput = {out: $.create(tpl($.vars))}\n"
+    },
+    {
+      "name": "handlebarsHelper",
+      "ns": "template",
+      "description": "Handlebars Helper",
+      "phrases": {
+        "active": "Adding handlebar helper"
       },
       "ports": {
         "input": {
@@ -125,19 +126,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Adding handlebar helper"
+      "dependencies": {
+        "npm": {
+          "handlebars": "latest"
+        }
       },
-      "description": "Handlebars Helper",
-      "ns": "template",
-      "name": "handlebarsHelper",
       "fn": "handlebars.registerHelper($.name, $.fn);\noutput.handlebars = $.create(handlebars);\n"
     },
     {
-      "dependencies": {
-        "npm": {
-          "jade": "0.x.x"
-        }
+      "name": "jade",
+      "ns": "template",
+      "description": "Jade Template engine",
+      "env": "server",
+      "phrases": {
+        "active": "Compiling jade template"
       },
       "ports": {
         "input": {
@@ -163,20 +165,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Compiling jade template"
+      "dependencies": {
+        "npm": {
+          "jade": "0.x.x"
+        }
       },
-      "env": "server",
-      "description": "Jade Template engine",
-      "ns": "template",
-      "name": "jade",
       "fn": "output = {out: $.create(jade.render($.body, $.vars))}\n"
     },
     {
-      "dependencies": {
-        "npm": {
-          "marked": "latest"
-        }
+      "name": "markdown",
+      "ns": "template",
+      "async": true,
+      "description": "Markdown",
+      "phrases": {
+        "active": "Creating markdown document"
       },
       "ports": {
         "input": {
@@ -195,20 +197,19 @@
           }
         }
       },
-      "phrases": {
-        "active": "Creating markdown document"
+      "dependencies": {
+        "npm": {
+          "marked": "latest"
+        }
       },
-      "description": "Markdown",
-      "async": true,
-      "ns": "template",
-      "name": "markdown",
       "fn": "on.input.in = function() {\n  output( { out: $.write('in', marked($.in)) });\n};\n"
     },
     {
-      "dependencies": {
-        "npm": {
-          "mustache": "latest"
-        }
+      "name": "mustache",
+      "ns": "template",
+      "description": "Mustache Template engine",
+      "phrases": {
+        "active": "Compiling mustache template"
       },
       "ports": {
         "input": {
@@ -234,19 +235,19 @@
           }
         }
       },
-      "phrases": {
-        "active": "Compiling mustache template"
+      "dependencies": {
+        "npm": {
+          "mustache": "latest"
+        }
       },
-      "description": "Mustache Template engine",
-      "ns": "template",
-      "name": "mustache",
       "fn": "output = {out: $.create(mustache.render($.body, $.vars))}\n"
     },
     {
-      "dependencies": {
-        "npm": {
-          "es6-template-strings": "latest"
-        }
+      "name": "string",
+      "ns": "template",
+      "description": "Compile and resolve template strings notation as specified in ES6",
+      "phrases": {
+        "active": "Applying template string"
       },
       "ports": {
         "input": {
@@ -270,19 +271,19 @@
           }
         }
       },
-      "phrases": {
-        "active": "Applying template string"
+      "dependencies": {
+        "npm": {
+          "es6-template-strings": "latest"
+        }
       },
-      "description": "Compile and resolve template strings notation as specified in ES6",
-      "ns": "template",
-      "name": "string",
       "fn": "output.out = $.write('in', es6_template_strings($.template, $.in))\n"
     },
     {
-      "dependencies": {
-        "npm": {
-          "js-yaml": "3.x.x"
-        }
+      "name": "yaml",
+      "ns": "template",
+      "description": "YAML Parser",
+      "phrases": {
+        "active": "Parsing YAML"
       },
       "ports": {
         "input": {
@@ -301,12 +302,11 @@
           }
         }
       },
-      "phrases": {
-        "active": "Parsing YAML"
+      "dependencies": {
+        "npm": {
+          "js-yaml": "3.x.x"
+        }
       },
-      "description": "YAML Parser",
-      "ns": "template",
-      "name": "yaml",
       "fn": "output = {out: $.write('in', js_yaml.safeLoad($.in, { strict: true }))}\n"
     },
     {
